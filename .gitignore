@@ -3,3 +3,4 @@
 *.out
 *.blg
 *.synctex.gz
+\.ipynb_checkpoints/
