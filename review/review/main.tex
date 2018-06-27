@@ -21,7 +21,9 @@
 \begin{document}
 
 \maketitle
-
+\newpage
+\tableofcontents
+\newpage
 Recommended article for programming:
 
 https://arxiv.org/pdf/1002.1912.pdf
@@ -65,7 +67,7 @@ Furthermore, the WIMP interaction can be dependent on the spin. Spin-independent
     \frac{dR}{dE_R}(E,t) = \frac{\rho_0}{m_\chi \cdot m_T} \int_{v_\text{min}}^{v_\text{max}} v \cdot f(\textbf{v},t) \frac{d \sigma}{dE_R} (E, v)d^3v
 \end{equation}
 
-These corrections are combined to form a complete picture of the interaction rate per kg detector material (Eq. \ref{interaction_rate}) \cite{Lewin:1995rx, Undagoitia:2015gya}. $\rho_0$ is the local dark matter density, $f(\mathbf{v}, t)$ the velocity distribution of dark matter particles, and $\tfrac{d\sigma}{dE}$ its differential cross section through which the particle physics enters, such as the cross section and form factor, which can depend on the spin. $\sigma_0$ is the cross section at zero momentum and depends on the type and spin dependence of the interaction.
+These corrections are combined to form a complete picture of the interaction rate per kg detector material (Eq. \ref{interaction_rate}) \cite{Lewin:1995rx, Undagoitia:2015gya}. $\rho_0$ is the local dark matter density, $f(\mathbf{v}, t)$ the velocity distribution of dark matter particles, and $\tfrac{d\sigma}{dE}$ its differential cross section through which the particle physics enters, such as the cross section and form factor, which can depend on the spin. $\sigma_0$ is the cross section at zero momentum and depends on the type and spin dependence of the interaction. \todo{mention the dark matter mass dependence in the interaction rate}
 
 \begin{equation} \label{Eff_cross}
     \frac{d\sigma}{dE_R} = \frac{m_T}{2\mu_T^2 v^2} \left( \sigma_0^\text{SD} F^2_\text{SD}(E_R) + \sigma_0^\text{SI} F^2_\text{SI}(E_R)\right)^2
@@ -104,46 +106,20 @@ The WIMP particle could also scatter of an electron. Since the electron is in a 
 
 More details mathematics for the calculation of WIMP interactions have been proposed, such as non-relativistic Effective Field Theory \cite{Fitzpatrick:2012ib}. This could give a better description of the effective cross section of the collision and possibly make it impossible to compare direct detection experiments with different target material \cite{Schneck:2015eqa}. 
 
-\subsection{Local Dark Matter Density \small{\textit{Jelle van Urk}}} \label{Local_DM_Density}
-
-What is the local distribution of dark matter and what are its properties?
-https://arxiv.org/abs/1404.1938
-Local dark matter density:
-The local dark matter density, H1 and 2, 
-Method 1: Jeans equation, z-direction. Movement of stars of neighbourhood of Sun.  
-Method 2: Spherical shell and local dark matter. 
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.7\textwidth]{Century.png}
-    \caption{}
-\end{figure}
-
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.7\textwidth]{Halo.png}
-    \caption{}
-\end{figure}
-
-
-The local dark matter density, H5
-Systematic uncertainties in the determination of the local dark matter density:
-https://arxiv.org/pdf/1006.1322.pdf
-
-
-
-\subsection{Dark Matter Velocity Distribution \small{\textit{Jelle van Urk}}} \label{DM_Velocity}
+\subsection{Velocity Distribution \small{\textit{Jelle van Urk}}} \label{DM_Velocity}
 
 \begin{itemize}
-    \item minimum \& maximum energy Note: minimum energy might be dependent on elastic/inelastic scattering $v_\text{min}=\sqrt{\frac{m_T E}{2\mu^2_\chi}}$ \cite{Kavanagh:2014rya} for elastic scattering
     \item annual modulation \cite{Undagoitia:2015gya} for more references
 \end{itemize}
 
 Velocity Distribution:
-Maxwellian distributed, Earth moving through halo, vmin and vmax. Why Maxwellian, shape of halo. 
+Maxwellian distributed, Earth moving through halo, vmin and vmax of elastic scattering. \cite{Kavanagh:2014rya} Why Maxwellian, shape of halo. 
 Or non-Maxwellian, difference in shape distribution. 
 As mentioned in section 2.1, the expected recoil rate is necessary 
+
+\begin{equation}
+    v_{min} = \sqrt{\frac{m_{N}E_{R}}{2\mu^{2}_{N}}}
+\end{equation}
 
 https://arxiv.org/pdf/1002.1912.pdf
 \begin{figure}[h]
@@ -157,6 +133,53 @@ https://arxiv.org/pdf/1002.1912.pdf
     f(\textbf{v}) = \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{|\textbf{v}^{2}|}{2\sigma^{2}}}
 \end{equation}
 
+\section{Local Dark Matter Density \small{\textit{Jelle van Urk}}} \label{Local_DM_Density}
+
+%What is the local distribution of dark matter and what are its properties?
+%https://arxiv.org/abs/1404.1938
+%Local dark matter density:
+%The local dark matter density, H1 and 2, 
+%Method 1: Jeans equation, z-direction. Movement of stars of neighbourhood of Sun.  
+%Method 2: Spherical shell and local dark matter. 
+To get a better insight in the scattering interaction rate it's important to have some measurements in the local dark matter density ($\rho_{DM}$), because $\frac{dR}{dE_{R}}$ is directly proportional to this density. The local DM density gives the density in close neighbourhood of the SUN, usually around 100 - 1000pc. Older measurements give an local density of $0.542 \pm 0.042 \frac{GeV}{cm^{3}}$ (ref) and $0.25 \pm 0.09 \frac{GeV}{cm^{3}}$ (ref). Clearly they're not even similar within their uncertainties. Mainly because both used different data sets and assumptions in their methods. Therefore new calculations are done with the least amount of assumptions. In the next sections we will describe two of methods. The first uses the vertical motion of nearby stars, also called 'tracers' (ref). These motions are described with Jeans equations. The second is a global measure, which uses the rotation curve of the Milky Way to extrapolate the local DM density. \\
+In figure ... a history of local DM density measurements is shown over the last century. The first measurement was done by Kapteyn in 1922, who was the first who claimed to have proved the existence of dark matter. However, in the following decades his method was corrected and extended. In the late 80's there was a boost in the measurements, since new satellites were able to look at around 100.000 stars in a 100 pc radius. The different colors in the circles point out a different method used the determine the density: the values in blue are calculated from a surface density, the red one used the rotation curve and the green circle used a different assumption the surface density (ref). The grey band is $\rho_{DM,ext}$, the extrapolation of the rotation curve. 
+\FloatBarrier
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{Century.png}
+    \caption{}
+\end{figure}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Halo.png}
+    \caption{}
+\end{figure}
+
+\subsection{Extrapolation of $\rho_\text{DM}$}
+
+\subsection{Tracer stars model}
+The first method uses the vertical movement of neighbouring stars, also known as 'tracer stars'. In this system the stars obey the collisionless Boltzmann equation:
+\begin{equation}
+    \frac{df}{dt} = \frac{df}{dt} + \nabla_{x}f\cdot \textbf{v} - \nabla_{v}f\cdot\nabla_{x}\Phi = 0,
+\end{equation}
+where f is the distribution function of the surrounding stars. \textbf{v} and \textbf{x} are the velocity and position. The remaining $\Phi$ corresponds to the gravitational potential. If the system was in dynamical equilibrium, which isn't the case, we could directly calculate the gravitational forces between the stars. For out purposes we need to integrate this equation, which results in the Jeans equations (ref). We are interested in the z-direction of the stars, so we take the vertical component of these equation:
+
+\begin{equation}
+    \frac{1}{R\nu}\frac{\partial}{\partial R}(R\nu \sigma_{Rz}) + \frac{1}{R\nu}\frac{\partial}{\partial \phi}(\nu \sigma_{\phi z}) + \frac{1}{\nu}\frac{d}{dz}(\nu \sigma_{z}^{2}) = -\frac{d\Phi}{dz},
+\end{equation}
+
+where the first term is the 'tilt' term (T). This term couples the vertical and radial motion of the tracers. The second term is the 'axial' term (A), which does the same for the vertical and axial motions. The right hand side of this equation is the vertical acceleration K. Integrating both sides with respect to $z$ gives us the necessary expression for $\sigma_{z}^{2}$, which is the vertical velocity dispersion:
+
+\begin{equation}
+    \sigma_{z}^{2}(z) = \frac{1}{\nu(z)}\int_0^z\nu(z')[K_{z}(z')-T(z')-A(z')]dz' + \frac{C}{\nu(z)}. 
+\end{equation}
+
+
+
+
+
 % General information about the interaction rate. 
 % - General form
 % - Form Factor
@@ -168,90 +191,122 @@ https://arxiv.org/pdf/1002.1912.pdf
 % 
 
 \FloatBarrier
-\section{Elastic Scattering}
+\section{Elastic Scattering \small{\textit{Max Briel}}}
 
 The two main interaction mechanism between WIMPS and ordinary matter are elastic and inelastic scattering. The idea for elastic scattering of Dark Matter was introduced in 1984 by Goodman \& Witten \cite{Goodman:1984dc} and can produce a nuclear recoil effect necessary for measurement, while the momentum is conserved \cite{Undagoitia:2015gya, Lewin:1995rx}. This can take place in a spin-dependent and spin-independent fashion. 
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\textwidth]{Elastic_Scattering.png}
-    \caption{Elastic scattering of a dark matter of a Xenon atom that recoils due to the collision. Image from \cite{McCabe:2015eia}.}
+    \caption{Dark matter particle elastically scattering of a Xenon atom that recoils due to the collision. Image from \cite{McCabe:2015eia}.}
+    \label{elastic}
 \end{figure}
 
 
-\subsection{Spin-independent}
+\subsection{Spin-independent \small{\textit{Max Briel}}} \todo{I want to write more, but not sure about what}
 
 In a WIMP scenario it is expected that spin-independent interactions provide the largest contribution to the effective cross section. This becomes clear if the cross section at zero momentum from equation \ref{Eff_cross} is written out. 
 
 \begin{equation}
     \sigma^\text{SI}_0 = \sigma_{p \chi} \frac{\mu_T^2}{\mu_p^2} \left[Z \cdot f^p + (A-Z) f^n \right]^2
 \end{equation}
-There is a contribution to the WIMP interaction from the protons and neutrons in the nucleus. In most cases it is assumed that the interactions strength from the protons and neutrons are equal ($f^n = f^p$). This results in a $A^2$ dependence, where A is the atom mass number. 
-
-from the protons and the neutrons in the nucleus 
-
-- Spin-independent
-    - Formula
-    - fn = fp (isospin violating DM)
-    - Strongest interaction expected to see first
-    - Implications of target mass on the rate
-    - Implications of WIMP on the rate
-    - Spin-independent part might vanish depending on the type of particle assumed \cite{Lewin:1995rx}
+There is a contribution to the WIMP interaction from the protons and neutrons in the nucleus with an interaction cross section between the WIMP and a proton $\sigma_{p \chi}$. Although other theories exists \cite{Yaguna:2016bga}, it is assumed in most cases that the interaction strength from the protons and neutrons with the WIMP are equal ($f^n = f^p$). This results in a $A^2$ dependence, where $A$ is the atom mass number. This enhancement is of the order $\sim 10^4$ \cite{Vietze:2014vsa} and, therefore, heavy mass atoms are used as a target material in most direct detection experiments.
+However, the heavier mass number also increases the influence of the form factor on the event rate, which can cause a significant drop in interactions, as shown in figure \ref{nucleus mass influence}. Thus, different detectors can be sensitive in different regions. The spin-independent part can also completely vanish depending on the assumed nature of the WIMP particle \cite{Lewin:1995rx}.
 
 
-\subsection{Spin-dependent}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{mass_influence.png}
+    \caption{The mass number of the target material alters the interaction rate by increasing the influence of the form factor. The data comes from \cite{Undagoitia:2015gya} with a WIMP mass of 100 GeV/$c^2$ and a cross section of $10^{-45}$ cm$^2$.}
+    \label{nucleus mass influence}
+\end{figure}
 
-- Implementation into the cross section
 
-- Spin-dependent
-    - Formula
-    - Depends on average spin n \& p and on the spin quantum number
-    - Not as strong
-    - Effective-field theory currents for the coupling (an \& ap)
+\subsection{Spin-dependent \small{\textit{Max Briel}}}
+
+Since it is unknown if a dark matter particle can even spin-independently scatter of a nucleus, it is important to also look at possible spin-dependent interactions, even tough, the interaction strength is smaller. The corresponding zero momentum cross section is often expressed in average spin interaction $\langle S \rangle$ between the WIMP and neutrons \& protons. 
+
+\begin{equation}
+    \sigma^\text{SD}_0 = \frac{32}{\pi} \mu^2_T G^2_F \left[a_p \langle S^p \rangle + a_n \langle S^n \rangle \right]^2 \frac{J+1}{J}, 
+\end{equation}
+which depends on the total nuclear spin ($J$), Fermi coupling constant ($G_F^2$), and the effective coupling between the WIMP and nucleus particles ($a_p$ \& $a_n$) \cite{Undagoitia:2015gya}. The latter are often assumed to be the same \cite{Kavanagh:2014rya} and can be  calculated using chiral effective field theory currents \cite{Klos:2013rwa} or shell-model calculations \cite{Toivanen:2009zza}. 
 
 
 \FloatBarrier
-\section{Inelastic Scattering}
+\newpage
 
-Another possible interaction channel is inelastic scattering with three different, but similar outcomes: the nucleus \cite{Ellis:1988nb}, an electron \cite{Starkman:1994gf}, or the WIMP \cite{TuckerSmith:2001hy, TuckerSmith:2004jv, Miao:2013sqa} can be excited in a collision. 
+\section{Inelastic Scattering \small{\textit{Max Briel}}} \todo{check if it doesn't state that inelastic scattering is always spin-dependent}
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Inelastic_Scattering.png}
+    \caption{A dark matter particle scattering inelastically of a Xenon atom, which recoils and is put into an excited state. This is followed by a de-excitation and the emission of a photon. Image from \cite{McCabe:2015eia}.}
+    \label{inelastic}
+\end{figure}
 
+Another possible interaction channel is inelastic scattering of the WIMP, during which one of the particles is excited, because the average recoil energy of the interaction is around 1-100 keV. This is in the range for excitation of nuclear excitation, allowing it to be a candidate channel for dark matter detection \cite{Goodman:1984dc, Ellis:1988nb}. In the detector, three possible particles can be excited: an electron \cite{Starkman:1994gf}, the nucleus \cite{Ellis:1988nb}, or the WIMP \cite{TuckerSmith:2001hy, TuckerSmith:2004jv, Miao:2013sqa}. While these have each their own properties, they are all spin-dependent \cite{McCabe:2015eia} and require a larger minimal dark matter velocity \cite{TuckerSmith:2001hy}. It is important to note that other mechanisms, ideas, and particles have been proposed \cite{TuckerSmith:2004jv,Foot:2013uxa, Undagoitia:2015gya, Bramante:2016rdh} as the dark matter particle, but these are, currently, not in the spotlight of research \cite{Agnese:2018col}. 
 
-
-\subsection{WIMP excitation}
-
-The latter mechanism provides an explanation for discrepancies between DAMA \cite{Finkbeiner:2009ug} and CDMS \cite{Ahmed:2008eu} measurement results \cite{Chang:2008gd} and would suppress or even forbid elastic scattering in the detector. This mechanism has been experimentally constraint by the XENON \cite{Aprile:2011ts}, CDMS \cite{Arrenberg:2011zz}, and ZEPLIN \cite{Akimov:2010vk} collaborations. 
-
-\subsection{Nuclear excitation}
-
-The excitation of the nucleus and following de-excitation can be induced by odd mass nuclei \cite{Baudis:2013bba}. Since natural xenon contains odd and even isotopes, experiments using xenon can probe both elastic and inelastic scattering \cite{McCabe:2015eia}. The XENON100 and XMASS collaborations have set upper limit on this spin-dependent inelastic nucleon-WIMP interaction to $3.3 \times 10^{-38}$ cm$^2$ \cite{Uchida:2014cnn, Aprile:2017ngb}. If this interaction is detected, it provides proof for the spin-dependent nature of the WIMP-nucleon interaction. 
-
-\subsection{Electron excitation}
-
-It is also possible for low mass, sub-GeV, WIMPs to recoil off an electron ionizing the atom \cite{Essig:2011nj}. This allows for the probing for low mass dark matter particles as long as electron and nucleon scattering can be distinguished. Over the years several interaction constraints have been set \cite{Essig:2012yx,Essig:2017kqs, Agnes:2018oej,Agnese:2018col,  Crisler:2018gci}
+\begin{equation} \label{vmin_inel}
+    v_\text{min} = \frac{1}{\sqrt{2m_TE_R}} \left(\frac{m_TE_R}{\mu_{T \chi}} + \delta \right)
+\end{equation}
 
 
-Besides these interaction mechanisms, new ideas and particles have been introduced \cite{TuckerSmith:2004jv,Foot:2013uxa, Undagoitia:2015gya, Bramante:2016rdh} as the dark matter particle. 
-Experiments have constraint their possible masses and cross sections \cite{Agnese:2018col}.
+\subsection{WIMP excitation \small{\textit{Max Briel}}} \todo{Not sure if this needs it own chapter}
+
+One of the excited particles can be the WIMP particle. This channel was introduced by Tucker-Smith and Weiner in 2001 \cite{TuckerSmith:2001hy} to explain discrepancies between DAMA \cite{Finkbeiner:2009ug} and other direct detection experiments \cite{Chang:2008gd, Ahmed:2008eu}. The idea is that dark matter particles with enough kinetic energy up scatter into the heavier excited state above the threshold energy for this interaction, altering the relative sensitivity of detectors in three ways \cite{TuckerSmith:2001hy, TuckerSmith:2004jv, Chang:2008gd}:
+\begin{itemize}
+    \item \textbf{Suppression of low-energy events} Dark matter particles mostly have low velocities. Thus, they do not have the energy to excite the WIMP, making it impossible to detect this range of energies. 
+
+    \item \textbf{Annual modulation enhancement} When the earth moves in the same direction as the sun the velocity distribution is shifted upwards, allowing for more inelastic scatterings. However, if the earth moves in the opposite direction, then distribution is shifted downwards and less particles are above the threshold energy for excitation. 
+
+    \item \textbf{Heavier elements are favoured} With a heavier target mass material the WIMPs have a larger velocity range available to scatter off. Therefore, detectors with such heavier elements would be favoured in the inelastic scattering case. 
+\end{itemize}
+
+This mechanism has been experimentally constraint by the XENON \cite{Aprile:2011ts}, CDMS \cite{Arrenberg:2011zz}, and ZEPLIN \cite{Akimov:2010vk} collaborations. 
+
+
+\subsection{Nuclear excitation \small{\textit{Max Briel}}} \todo{Not sure if this needs it own chapter}
+
+Another possibility is the excitation of the nucleus followed by a de-excitation. This can be induced in odd-mass nuclei \cite{Baudis:2013bba}. Since natural xenon contains odd and even isotopes, experiments using xenon can probe both elastic and inelastic scattering \cite{McCabe:2015eia}. The XENON100 and XMASS collaborations have set upper limit on this spin-dependent inelastic nucleon-WIMP interaction to $3.3 \times 10^{-38}$ cm$^2$ \cite{Uchida:2014cnn, Aprile:2017ngb}. If this interaction is detected, it provides proof for the spin-dependent nature of the WIMP-nucleon interaction. 
+
+\subsection{Electron excitation \small{\textit{Max Briel}}} \todo{this might need to be a section instead of a subsection, since we will be writing a lot about it}
+
+A final option is the excitation of an electron in the interaction. This can lead to an ionisation of the atom \cite{Essig:2011nj}, which requires an energy transfer of 1-10 eV. This is in the recoil energy ranges of light dark matter particles with masses of keV to MeV. Such energies would be insufficient for nuclear recoil to take place. Thus, inelastic electron-WIMP scattering is essential to probe the lower mass region of the WIMP parameter space. Using this mechanism four different methods can be used to make measurements. First, an individual electron can be measured that has been kick out of the atom by the dark matter particle \cite{Bernabei:2007gr, Kopp:2009et, Dedes:2009bk}. From this interaction it is also possible to measure the leftover ion. A lot of the energy in any type of inelastic dark matter scattering is send out as heat in the form of phonons. This might be possible using ultra-low threshold detectors \cite{Formaggio:2011jt}. Furthermore, it is possible to measure the photon emitted in the de-excitation phase. This is not an easy task, because it requires a good understanding of the atomic structure of the target material and a photon must not be in resonance for re-absorption \cite{Starkman:1994gf}. In current searches in the sub-GeV WIMP mass regime the main method for detecting an electron-WIMP interaction is ionisation of the target atom. 
+
+ 
+\todo{Someone else can write the next things}
+- Please include Scattering rate from the slides
+
+
+- More about how we are detecting these things. \textbf{Peter}\\
+- What are the experiments and is the current state in this field? \textbf{Peter}\\
+- What are the found limits? \textbf{Peter}\\
+- Going to even lower mass WIMP!!!! \textbf{Jelle}\\
+
+Electron scattering in scintillators. 
+
 
 \subsubsection{Interaction rate?}
 
 \newpage
 \FloatBarrier
 \section{Experiments \small{\textit{Peter Bosch}}}
-% \begin{itemize}
-%     \item Particle created in universe
-%     \item Doesn't interact with other particles
-%     \item Goes towards Earth
-%     \item Comes into detector
-%     \item Interacts with e.g. Xenon
-%     \item Electrons ejected from collision
-%     \item Drifted to detector
-%     \item Detector gives signal
-% \end{itemize}
+
 Several experiments are operational to detect dark matter directly. In this section the working principle of these detectors, the current experiments and the experiments planned for in the future are discussed.
-\subsection{Working principle}
-Some of the WIMPs in the universe is directing towards Earth. It is barely interacting with ordinary matter and will reach Earth. There it goes through the atmosphere (without interacting). At the surface it is still not interacting and comes into the underground observatories. At these observatories detectors are placed in big tanks of water to prevent other particles to enter the detector. The used detectors are Time Projection Chambers (TPCs) \cite{Akerib:2015gmi}. The WIMP is interacting with the molecules in the TPC. Some light is created and detected with photomultipliers (S1 signal). The electrons created in the interaction are drifted by an external electric field. When reached the top of the detector, lots of photons are created and detected (S2 signal). In this way interactions between WIMPs and the molecules of the TPC can be detected. This is sketched in figure \ref{fig:working}.
+
+\subsection{Three measuring parameters}
+\todo{Make better title and word for things}Three things can be measured to detect dark matter:
+\begin{itemize}
+    \item scintillation,
+    \item ionization and
+    \item heat.
+\end{itemize}
+Direct dark matter detectors measure a combination of two of them. The detectors in sections \ref{sec:PandaX} till \ref{sec:DarkSide} use scintillation and ionization. The SuperCDMS detector in section \ref{sec:SuperCDMS} detects heat and photons (scintillation). In CRESST (section \ref{sec:CRESST}) heat and ionization is measured.
+
+
+\subsection{Working principle (scintillation and ionization)}
+\label{sec:working_principle}
+Some of the WIMPs in the universe are directing towards Earth. It is barely interacting with ordinary matter and will reach Earth. There it goes through the atmosphere (without interacting). At the surface it is still not interacting and comes into the underground observatories. At these observatories detectors are placed in big tanks of water to prevent other particles to enter the detector. The used detectors are Time Projection Chambers (TPCs) \cite{Akerib:2015gmi}. The WIMP is interacting with the molecules in the TPC. Some light is created and detected with photomultipliers (S1 signal). The electrons created in the interaction are drifted by an external electric field. When reached the top of the detector, lots of photons are created and detected (S2 signal). To reduce background, the detectors are place in basins of e.g. water. Non-dark matter particles will interact in here before entering the TPC. In this way interactions between WIMPs and the molecules of the TPC can be detected. This is sketched in figure \ref{fig:working}.
 
 \begin{figure}[h]
     \centering
@@ -260,23 +315,21 @@ Some of the WIMPs in the universe is directing towards Earth. It is barely inter
     \label{fig:working}
 \end{figure}
 
-With this process, the cross section of the interactions of WIMPs and the molecules of the TPC can be determined. So far, only upper limits of the cross section are found in several experiments (see figure \ref{fig:Sens}). These experiments are covered in section \ref{sec:current_exp}.
+With this process, the cross section of the interactions of WIMPs and the molecules of the TPC can be determined. So far, only upper limits of the cross section are found in several experiments (see figure \ref{fig:Sens}). The shape of the curves are like this due to two aspects. For low masses the energy of the WIMP is not high enough to be detected. So less interactions will take place in the detectors and the sensitivity becomes more worse. For high WIMP masses the interaction rate is also lower because $R\propto m_\chi^{-1}$ (see eq. (\ref{interaction_rate})).
+Some of the existing experiments are covered in section \ref{sec:current_exp}.
 \subsubsection{Content TPC}
 One can chose the material inside the TPC. Mostly liquid noble-gasses are used. Xenon is the most used noble-gas, although also argon is being used. The advantage of using xenon is that it is sensitive to both spin-dependent and spin-independent interactions \cite{Aprile:2013doa}, it is self-shielding due to a high density (so more xenon can be used for measuring) \cite{Undagoitia:2015gya} and it is stable.
 
-%\hl{``The detector is set up like an enormous bell capable of ringing in response to the lightest tap from a dark matter particle. Nestled within two outer chambers designed to detect and remove contaminating particles lies a chamber filled with 10 tons of liquid xenon. If a piece of dark matter runs into a xenon atom, the xenon will collide with its neighbors, producing a burst of ultraviolet light and releasing electrons.
 
-%Moments later, the free electrons will excite the xenon gas at the top of the chamber and release a second, brighter burst of light. More than 500 photomultiplier tubes will watch for these signals, which together can discriminate between a contaminating particle and true dark matter collisions.''} \cite{PhysOrg}
+% (Afbeelding 1 van \href{https://www.symmetrymagazine.org/image/april-2012-dark-matter-underground}{Symmetry magazine}, afbeelding 2 van \href{https://phys.org/news/2017-03-dark-ton.html}{Phys.org})
 
-%Read more at: \href{https://phys.org/news/2017-03-dark-ton.html}{https://phys.org/news/2017-03-dark-ton.html}.
-% Plaatje!! :) (Afbeelding 1 van \href{https://www.symmetrymagazine.org/image/april-2012-dark-matter-underground}{Symmetry magazine}, afbeelding 2 van \href{https://phys.org/news/2017-03-dark-ton.html}{Phys.org})
 
 \subsection{Current experiments}
 \label{sec:current_exp}
 At the moment, several experiments on the direct detection of dark matter are being done. Some of them are discussed here: the PandaX-II detector in Sichuan, China, the LUX detector in South Dakota, USA and the XENON1T detector in Abruzzo, Italy.
 
 \subsubsection{PandaX-II}
-\textcolor{red}{P}article \textcolor{red}{and A}strophysical \textcolor{red}{X}enon Detector II (PandaX-II) is a dark matter experiment situated in the region Sichuan in the People's Republic of China. It is a detector with 300 kg of effective liquid xenon target \cite{Liu2015} (more details and latest results in e.g. \cite{Cui:2017nnn}).\\
+\label{sec:PandaX}\textcolor{red}{P}article \textcolor{red}{and A}strophysical \textcolor{red}{X}enon Detector II (PandaX-II) is a dark matter experiment situated in the region Sichuan in the People's Republic of China. It is a detector with 300 kg of effective liquid xenon target \cite{Liu2015} (more details and latest results in e.g. \cite{Cui:2017nnn}).\\
 
 \begin{figure}[h]
     \centering
@@ -286,7 +339,7 @@ At the moment, several experiments on the direct detection of dark matter are be
 \end{figure}
 
 \subsubsection{LUX}
-The \textcolor{red}{L}arge \textcolor{red}{U}nderground \textcolor{red}{X}enon experiment (LUX) in the Sanford Underground Research Facility near Lead, South Dakota, USA is an 30 million US dollar costing experiment looking for dark matter at 1,480 meters depth \cite{Reich2013}. The latest results are written in \cite{Akerib:2016vxi}. For more details see e.g. \cite{Akerib:2012ys}.
+\label{sec:LUX}The \textcolor{red}{L}arge \textcolor{red}{U}nderground \textcolor{red}{X}enon experiment (LUX) in the Sanford Underground Research Facility near Lead, South Dakota, USA is an 30 million US dollar costing experiment looking for dark matter at 1,480 meters depth \cite{Reich2013}. The latest results are written in \cite{Akerib:2016vxi}. For more details see e.g. \cite{Akerib:2012ys}.
 
 %LUX (Afbeelding van \href{https://physicsworld.com/a/dark-matter-constraints-tightened-after-lux-no-shows/}{Physics World})\\
 
@@ -298,7 +351,7 @@ The \textcolor{red}{L}arge \textcolor{red}{U}nderground \textcolor{red}{X}enon e
 \end{figure}
 
 \subsubsection{XENON1T}
-In the Gran Sasso d'Italia - a mountain massive in Southern Italy - several scientific experiments are being done. One of them is the XENON1T dark matter detector. 1.3 tonne of liquid xenon is used to take the latest data \cite{Aprile:2018dbl}. Currently, it is the most sensitive dark matter detector (see figure \ref{fig:Sens}). It set the upper limit for the WIMP-nucleon spin-independent cross section at WIMPs with mass $m_\chi =30\ GeV/c^2$ and $\sigma_\chi^{m=30\ GeV/c^2}<4.1\times 10^{-47}\ cm^2$.
+\label{sec:XENON}In the Gran Sasso d'Italia - a mountain massive in Southern Italy - several scientific experiments are being done. One of them is the XENON1T dark matter detector. 1.3 tonne of liquid xenon is used to take the latest data \cite{Aprile:2018dbl}. Currently, it is the most sensitive dark matter detector (see figure \ref{fig:Sens}). It set the upper limit for the WIMP-nucleon spin-independent cross section for WIMPs with mass $m_\chi =30\ GeV/c^2$ at $\sigma_\chi^{m=30\ GeV/c^2}<4.1\times 10^{-47}\ cm^2$.
 %(Afbeelding van \href{http://www.physics.purdue.edu/darkmatters/xenon1t/?tag=xenon1t}{Perdue University})
 
 \begin{figure}[h]
@@ -309,14 +362,32 @@ In the Gran Sasso d'Italia - a mountain massive in Southern Italy - several scie
 \end{figure}
 
 \subsubsection{DarkSide}
-Next to the XENON1T experiment the DarkSide experiment is running in the Gran Sasso National Laboratory. This is a direct dark matter detector with TPCs based on argon \cite{Agnes:2015ftt, Agnes:2018mon, Edkins:2017qct}. This detector is a few orders of magnitude less sensitive than the detectors with xenon-based TPCs (see figure \ref{fig:Sens}).
+\label{sec:DarkSide}Next to the XENON1T experiment the DarkSide experiment is running in the Gran Sasso National Laboratory. This is a direct dark matter detector with TPCs based on argon \cite{Agnes:2015ftt, Agnes:2018mon, Edkins:2017qct}. This detector is a few orders of magnitude less sensitive than the detectors with xenon-based TPCs (see figure \ref{fig:Sens}).
 
-%Latest results $\sigma_\chi^{M>6\ GeV/c^2}<4.1\times 10^{-47}$ cm$^2$ \cite{Aprile:2018dbl}.
+\subsubsection{SuperCDMS}
+\label{sec:SuperCDMS}In the Soudan Underground Mine, Minnesota, a dark matter detector named SuperCDMS (\textcolor{red}{Super} \textcolor{red}{C}ryogenic \textcolor{red}{D}ark \textcolor{red}{M}atter \textcolor{red}{S}earch) is build (see figure \ref{fig:SuperCDMS}). This detector works with silicon crystal cooled down to $33\ mK$ to measure phonons (heat) \cite{Agnese:2018col}. More on SuperCDMS in \cite{Agnese:2013jaa, Agnese:2014aze, Agnese:2015nto}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=.9\textwidth]{SuperCDMS.png}
+    \caption{One of the modules used in the SuperCDMS detector \cite{SuperCDMSphoto}.}
+    \label{fig:SuperCDMS}
+\end{figure}
+
+\subsubsection{CRESST-II}
+\label{sec:CRESST} The \textcolor{red}{C}ryogenic \textcolor{red}{R}are \textcolor{red}{E}vent \textcolor{red}{S}earch with \textcolor{red}{S}uperconducting \textcolor{red}{T}hermometers-II is detecting dark matter with photons and phonons \cite{Angloher:2015ewa}. In this experiment a $CaWO_4$ crystal is used. Most of the energy deposition is in the form of heat. Less than $5\%$ of the energy goes into the scintillation. For more information on CRESST, see \cite{Bravin:1999fc,Angloher:2014myn,Petricca:2017zdp}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{CRESST.jpg}
+    \caption{Installation of CRESST \cite{CRESSTphoto}.}
+    \label{fig:CRESST}
+\end{figure}
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\textwidth]{Sens_plot_floor.png}
-    \caption{Sensitivity plot. Data from DarkSide \cite{Agnes:2015ftt}, PandaX \cite{Cui:2017nnn}, LUX \cite{Akerib:2016vxi}, XENON1T \cite{Aprile:2018dbl} and floor \cite{Liu:2017drf}.}
+    \caption{Sensitivity plot. Data from SuperCDMS \cite{Agnese:2014aze}, CRESST-II \cite{Angloher:2015ewa}, DarkSide \cite{Agnes:2015ftt}, PandaX \cite{Cui:2017nnn}, LUX \cite{Akerib:2016vxi}, XENON1T \cite{Aprile:2018dbl} and floor \cite{Liu:2017drf}.}
     \label{fig:Sens}
 \end{figure}
 
@@ -337,6 +408,9 @@ DARWIN is a new to build dark matter detector. DARWIN stands for \textcolor{red}
 \subsubsection{LZ}
 LZ is a combination of \textcolor{red}{L}UX and \textcolor{red}{Z}EPLIN (\textcolor{red}{Z}on\textcolor{red}{e}d \textcolor{red}{p}roportional scintillation in \textcolor{red}{li}quid \textcolor{red}{n}oble gases). It's currently being built in the Sanford Underground Research Facility. See for more (technical) information \cite{Akerib:2015cja,Mount:2017qzi}.
 
+\subsection{Electron excitation}
+\subsubsection{Noble liquids}
+\subsubsection{Semiconductors}
 
  
 
@@ -346,41 +420,60 @@ LZ is a combination of \textcolor{red}{L}UX and \textcolor{red}{Z}EPLIN (\textco
 In dark matter direct detection experiments, one always tries to bring down the sensitivity of interaction in the detector. At a certain moment interactions of neutrinos can not longer be neglected. Although neutrinos have a very small cross section, they do interact. So one will measure the neutrinos in the detector. This is called the neutrino floor. In figure \ref{fig:Sens} the neutrino floor is given. The yellow solid line is the place where one interaction has taken place. So beneath this line, interactions with neutrinos can become a problem. In this section we will go into the neutrino floor and how to go beneath it.
 
 \subsection{Origin of neutrinos \small{\textit{Peter Bosch}}}
-As said before neutrinos are interacting inside the detectors. These neutrinos are coming from several sources. The three main sources are
+As said before neutrinos are interacting inside the detectors. These neutrinos are coming from several sources. The main sources are
 \begin{enumerate}
-    \item the sun,
-    \item the atmosphere and
-    \item supernovae.
+    \item the Sun,
+    \item the Earth,
+    \item the atmosphere,
+    \item supernovae and
+    \item nuclear reactors.
 \end{enumerate}
-Also some other small sources are contributing as neutrino source. All these sources are discussed here.
+The neutrino fluxes for these source are given in table \ref{tab:neutrino_flux}.
+\begin{table}[]
+    \centering
+    \includegraphics[width=.8\textwidth]{Neutrino_fluxes.PNG}
+    \caption{Neutrino fluxes in $cm^{-2}\ s^{-1}$, the energy range and their sources \cite{Monroe:2007xp}.}
+    \label{tab:neutrino_flux}
+\end{table}
 \subsubsection{Solar neutrinos}
-\begin{itemize}
-    \item Sun reactions
-    \item In some reactions neutrinos produced
-    \item Neutrinos go through rest sun
-    \item Some go to Earth
-    \item Go through atmosphere
-    \item Get into detector
-    \item Interactions find place
-\end{itemize}
+In the core of the Sun lots of nuclear fusion reactions happen. The main reaction cycle of the Sun is the proton cycle, but also other cycles as the CNO cycle provides the Sun energy \cite{Bonventre:2018hyd}. With some of these reactions neutrinos are created. For example, in the full proton-proton cycle,
+\begin{align}
+    {}^1\text{H}+{}^1\text{H}&\rightarrow {}^2\text{H}+e^++\nu_e \nonumber\\
+    {}^2\text{H} + {}^1\text{H} &\rightarrow ^3\text{He}+\gamma \nonumber\\
+    2\ {}^3\text{He} &\rightarrow {}^4\text{He}+2\ {}^1\text{H},
+\end{align}
+two neutrinos are created. These neutrinos will travel from the core to the outer shell of the Sun without having any reaction (or at least very little). From there they travel through space. Some of the neutrinos - $2\pi R_\oplus^2 / 4\pi d^2 \approx 10^{-7}\%$ - are going towards Earth. They can also go through the Earth atmosphere without a negligible amount of interactions. Again a small fraction of the remaining neutrinos are hitting the detector in the experiments searching for dark matter. Here the neutrinos interact more because the detectors are made very sensitive for this kind of interactions as they are similar for dark matter interactions.
 
 \subsubsection{Atmospheric neutrinos}
-\begin{itemize}
-    \item Particle created in universe (Cosmic ray)
-    \item Interaction in outer atmosphere
-    \item New particles decay
-    \item Cascade of particle interactions/decays
-    \item Neutrinos created in cascade
-    \item They go through atmosphere and interact in detector
-\end{itemize}
+In the universe particles are created (e.g. pions). These particles move through space without interacting and are called cosmic rays. In the outer atmosphere pions start to decay creating neutrinos \cite{Fukuda:1998mi,Gaisser:2016obt}. This is dominated by the decays
+\begin{equation}
+    \pi^+\rightarrow\mu^++\nu_\mu
+\end{equation}
+and
+\begin{align}
+    \mu^+\rightarrow e^++\bar{\nu}_\mu+\nu_e.
+\end{align}
+As before with solar neutrinos, they don't interact in the remaining atmosphere. The non-neutrino particles will further decay and create neutrinos. All these neutrinos can interact in a dark matter detector.
 
 \subsubsection{Supernovae neutrinos}
+At the end of their lifetime, starts explodes \cite{raffelt1996stars}. These explosions are called supernovae. Some supernovae create neutrinos \cite{Beacom:2010kk}. The first neutrinos were detected in 1987 with Kamiokande \cite{Totsuka:1988iyh}. The neutrinos were coming from a supernova called SN1987A in the Large Magellanic Cloud.
 
 \subsubsection{Other neutrinos}
-Earth and nuclear
+As stated before and can be seen in table \ref{tab:neutrino_flux} there are, besides solar, atmospheric and supernovae neutrinos, two other sources of neutrinos. Some are coming from natural decays in the inner Earth (mostly ${}^{238}U$ and ${}^{232}Th$). Also some neutrinos are created by man-made decays in nuclear reactors.
 
 \subsection{A fundamental limit \small{\textit{Max Briel}}}
-\textbf{Max}
+
+It is expected that the neutrino floor will be reached in the coming years; rather sooner than later. This rises the question whether the neutrino background could limit the possible detection of dark matter, because the signal from an neutrino particle looks exactly the same as that of a WIMP in current detectors \cite{Gutlein:2010tq,Billard:2013qya}. Due to their extremely small interaction cross section, neutrinos cannot be shielded from the detector. Thus, they impose a limit on the minimum measurable cross section. This is not a final limit; by increasing the exposure, which depends on the mass and measurement time, it is possible to increase the discovery reach. As shown in figure \ref{discovery_limit}, initially, this scales as $1/MT$, when neutrino interactions are minimum. However, at higher exposures the neutrinos become more important and the discovery limit starts to scale as $1/\sqrt{MT}$. The point where it changes is WIMP mass dependent and is often what is called the neutrino floor. In reality it is still possible to continue the exposure and continue the search below this neutrino limit, therefore, it is a "soft" limit. If the exposure is increased even more, eventually the discovery reach will almost flatten out. This plateau is also known as the "hard" floor, but to reach it the exposure has to be unrealistically high \cite{Wyenberg:2018eyv}. 
+
+The simplest option to surpass this limit is to distinguish nuclear recoil and electron recoil events. 
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Discovery_limit.png}
+    \caption{Discovery limit vs exposure for a 6 GeV/$c^2$ WIMP with Ge, Xe, Ar for 100 neutrino events in 240, 130, and 430 kg-years. Image from \cite{Billard:2013qya}.}
+    \label{discovery_limit}
+\end{figure}
 
 
 
