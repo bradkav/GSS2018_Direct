@@ -12,7 +12,7 @@
 \usepackage{soul}
 \usepackage{placeins}
 
-\title{Direct detection of dark matter}
+\title{\textbf{Direct detection of dark matter}\\ \line(1,0){400}}
 \author{Peter Bosch, Max Briel and Jelle van Urk}
 \date{June 2018}
 
@@ -107,7 +107,9 @@ The WIMP particle could also scatter of an electron. Since the electron is in a 
 More details mathematics for the calculation of WIMP interactions have been proposed, such as non-relativistic Effective Field Theory \cite{Fitzpatrick:2012ib}. This could give a better description of the effective cross section of the collision and possibly make it impossible to compare direct detection experiments with different target material \cite{Schneck:2015eqa}. 
 
 \subsection{Velocity Distribution \small{\textit{Jelle van Urk}}} \label{DM_Velocity}
+https://arxiv.org/pdf/1410.8051.pdf
 
+As mentioned in the previous section, the scattering rate depends on an integral over the velocity distribution $f(\textbf{v},t)$ of the DM particles. These particles tend to be moving in an isotropic Maxwellian distribution around 0 inside in the DM halo. However, as we know, such a distribution is created in a ideal gas where the particles are colliding. This isn't the case for DM particles in the halo, since they're not interacting with each other. Under this assumption, $f(\textbf{v},t$
 \begin{itemize}
     \item annual modulation \cite{Undagoitia:2015gya} for more references
 \end{itemize}
@@ -117,8 +119,9 @@ Maxwellian distributed, Earth moving through halo, vmin and vmax of elastic scat
 Or non-Maxwellian, difference in shape distribution. 
 As mentioned in section 2.1, the expected recoil rate is necessary 
 
+
 \begin{equation}
-    v_{min} = \sqrt{\frac{m_{N}E_{R}}{2\mu^{2}_{N}}}
+    v_{min} = \sqrt{\frac{m_{N}E_{R}}{2\mu^{2}_{\chi N}}}
 \end{equation}
 
 https://arxiv.org/pdf/1002.1912.pdf
@@ -159,12 +162,16 @@ In figure ... a history of local DM density measurements is shown over the last 
 
 \subsection{Extrapolation of $\rho_\text{DM}$}
 
+
+
+
 \subsection{Tracer stars model}
+%arXiv:1507.08581v2
 The first method uses the vertical movement of neighbouring stars, also known as 'tracer stars'. In this system the stars obey the collisionless Boltzmann equation:
 \begin{equation}
     \frac{df}{dt} = \frac{df}{dt} + \nabla_{x}f\cdot \textbf{v} - \nabla_{v}f\cdot\nabla_{x}\Phi = 0,
 \end{equation}
-where f is the distribution function of the surrounding stars. \textbf{v} and \textbf{x} are the velocity and position. The remaining $\Phi$ corresponds to the gravitational potential. If the system was in dynamical equilibrium, which isn't the case, we could directly calculate the gravitational forces between the stars. For out purposes we need to integrate this equation, which results in the Jeans equations (ref). We are interested in the z-direction of the stars, so we take the vertical component of these equation:
+where f is the distribution function of the surrounding stars. \textbf{v} and \textbf{x} are their velocity and position. The remaining $\Phi$ corresponds to the gravitational potential. If the system was in dynamical equilibrium, which isn't the case, we could directly calculate the gravitational forces between the stars. For our purposes we need to integrate this equation, which results in the Jeans equations (ref). We are interested in the z-direction of the tracers, because their vertical movement is mostly induced by the gravitational force of the DM particles in the halo. That's because all the baryonic matter lies in the disc plane of the galaxy and the density quickly decreases in the z-direction. For this reason we take the vertical component of the Jeans equation \cite{BT2}:
 
 \begin{equation}
     \frac{1}{R\nu}\frac{\partial}{\partial R}(R\nu \sigma_{Rz}) + \frac{1}{R\nu}\frac{\partial}{\partial \phi}(\nu \sigma_{\phi z}) + \frac{1}{\nu}\frac{d}{dz}(\nu \sigma_{z}^{2}) = -\frac{d\Phi}{dz},
@@ -176,7 +183,7 @@ where the first term is the 'tilt' term (T). This term couples the vertical and 
     \sigma_{z}^{2}(z) = \frac{1}{\nu(z)}\int_0^z\nu(z')[K_{z}(z')-T(z')-A(z')]dz' + \frac{C}{\nu(z)}. 
 \end{equation}
 
-
+Knowing the vertical velocity distribution of the tracers, it's possible to calculate $\rho_{DM}$ necessary to induce this movement. The complete method and calculations are beyond the scope of this report and are derived in (ref), which leads to some interesting results. They numerically simulate the different terms in equation ..., where they also show the importance of the 'tilt' term. 
 
 
 
@@ -419,6 +426,14 @@ LZ is a combination of \textcolor{red}{L}UX and \textcolor{red}{Z}EPLIN (\textco
 \label{sec:floor}
 In dark matter direct detection experiments, one always tries to bring down the sensitivity of interaction in the detector. At a certain moment interactions of neutrinos can not longer be neglected. Although neutrinos have a very small cross section, they do interact. So one will measure the neutrinos in the detector. This is called the neutrino floor. In figure \ref{fig:Sens} the neutrino floor is given. The yellow solid line is the place where one interaction has taken place. So beneath this line, interactions with neutrinos can become a problem. In this section we will go into the neutrino floor and how to go beneath it.
 
+\begin{table}[h!]
+    \centering
+    \includegraphics[width=.8\textwidth]{Neutrino_fluxes.PNG}
+    \caption{Neutrino fluxes in $cm^{-2}\ s^{-1}$, the energy range and their sources \cite{Monroe:2007xp}.}
+    \label{tab:neutrino_flux}
+\end{table}
+
+
 \subsection{Origin of neutrinos \small{\textit{Peter Bosch}}}
 As said before neutrinos are interacting inside the detectors. These neutrinos are coming from several sources. The main sources are
 \begin{enumerate}
@@ -429,20 +444,24 @@ As said before neutrinos are interacting inside the detectors. These neutrinos a
     \item nuclear reactors.
 \end{enumerate}
 The neutrino fluxes for these source are given in table \ref{tab:neutrino_flux}.
-\begin{table}[]
-    \centering
-    \includegraphics[width=.8\textwidth]{Neutrino_fluxes.PNG}
-    \caption{Neutrino fluxes in $cm^{-2}\ s^{-1}$, the energy range and their sources \cite{Monroe:2007xp}.}
-    \label{tab:neutrino_flux}
-\end{table}
+
 \subsubsection{Solar neutrinos}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 0.9\textwidth]{Plot_neutrino_flux.png}
+    \caption{Solar, atmospheric, and diffuse supernova neutrino fluxes arriving at earth. From \cite{Billard:2013qya}}
+    \label{fig:neutrino_flux}
+\end{figure}
+
 In the core of the Sun lots of nuclear fusion reactions happen. The main reaction cycle of the Sun is the proton cycle, but also other cycles as the CNO cycle provides the Sun energy \cite{Bonventre:2018hyd}. With some of these reactions neutrinos are created. For example, in the full proton-proton cycle,
 \begin{align}
     {}^1\text{H}+{}^1\text{H}&\rightarrow {}^2\text{H}+e^++\nu_e \nonumber\\
     {}^2\text{H} + {}^1\text{H} &\rightarrow ^3\text{He}+\gamma \nonumber\\
     2\ {}^3\text{He} &\rightarrow {}^4\text{He}+2\ {}^1\text{H},
 \end{align}
+
 two neutrinos are created. These neutrinos will travel from the core to the outer shell of the Sun without having any reaction (or at least very little). From there they travel through space. Some of the neutrinos - $2\pi R_\oplus^2 / 4\pi d^2 \approx 10^{-7}\%$ - are going towards Earth. They can also go through the Earth atmosphere without a negligible amount of interactions. Again a small fraction of the remaining neutrinos are hitting the detector in the experiments searching for dark matter. Here the neutrinos interact more because the detectors are made very sensitive for this kind of interactions as they are similar for dark matter interactions.
+
 
 \subsubsection{Atmospheric neutrinos}
 In the universe particles are created (e.g. pions). These particles move through space without interacting and are called cosmic rays. In the outer atmosphere pions start to decay creating neutrinos \cite{Fukuda:1998mi,Gaisser:2016obt}. This is dominated by the decays
@@ -465,10 +484,7 @@ As stated before and can be seen in table \ref{tab:neutrino_flux} there are, bes
 
 It is expected that the neutrino floor will be reached in the coming years; rather sooner than later. This rises the question whether the neutrino background could limit the possible detection of dark matter, because the signal from an neutrino particle looks exactly the same as that of a WIMP in current detectors \cite{Gutlein:2010tq,Billard:2013qya}. Due to their extremely small interaction cross section, neutrinos cannot be shielded from the detector. Thus, they impose a limit on the minimum measurable cross section. This is not a final limit; by increasing the exposure, which depends on the mass and measurement time, it is possible to increase the discovery reach. As shown in figure \ref{discovery_limit}, initially, this scales as $1/MT$, when neutrino interactions are minimum. However, at higher exposures the neutrinos become more important and the discovery limit starts to scale as $1/\sqrt{MT}$. The point where it changes is WIMP mass dependent and is often what is called the neutrino floor. In reality it is still possible to continue the exposure and continue the search below this neutrino limit, therefore, it is a "soft" limit. If the exposure is increased even more, eventually the discovery reach will almost flatten out. This plateau is also known as the "hard" floor, but to reach it the exposure has to be unrealistically high \cite{Wyenberg:2018eyv}. 
 
-The simplest option to surpass this limit is to distinguish nuclear recoil and electron recoil events. 
-
-
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
     \includegraphics[width=0.9\textwidth]{Discovery_limit.png}
     \caption{Discovery limit vs exposure for a 6 GeV/$c^2$ WIMP with Ge, Xe, Ar for 100 neutrino events in 240, 130, and 430 kg-years. Image from \cite{Billard:2013qya}.}
@@ -476,6 +492,26 @@ The simplest option to surpass this limit is to distinguish nuclear recoil and e
 \end{figure}
 
 
+The simplest option to surpass this limit is to distinguish nuclear recoil and electron recoil events. In the low energy recoil regime most recoil events are expected to come from electron recoil events. For an neutrino to induce a similar signal it has to have a low momentum. Three sources can create these neutrinos \cite{Baudis:2013qla}: the solar $pp$-chain, the ${}^7\text{Be}$ decay and double $\beta$ decay of Xenon-136 \cite{Albert:2015eem}. However, their signal is completely different than that of the WIMP-electron scattering. Therefore, it would still be possible to distinguish the WIMP from the background. Eventually, even this background becomes too big and a minimum cross section will be of the order $10^{-48}$cm$^2$ \cite{Schumann:2015cpa}.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Electron_neutrino.png}
+    \caption{$pp$, ${}^7\text{Be}$, and double $\beta$ decay neutrinos scattering of the electron in an LXe detector. The WIMP scattering rate is depicted in black for two different WIMP masses with different cross sections. Image from \cite{Baudis:2013qla}.}
+    \label{fig:electron_neutrino}
+\end{figure}
+
+
+For the nuclear recoil events the neutrinos need to have a higher energy and their energy spectrum is different. The largest contribution comes from $^8$B process in the sun \cite{Strigari:2009bq}, which is complemented with neutrinos from the He-$p$ process and a diffuse supernova background. These interactions have a relatively low recoil energy. It is the neutrinos from atmospheric neutrinos that contribute to the background at higher recoil energies. In figure \ref{fig:nuclear_neutrino} several WIMP masses with a cross section are plotted to show the difference between their event rates. The 6 GeV$c^2$ WIMP in almost completely hidden by the solar neutrino background. Therefore, it will be almost impossible to distinguish the signal from the background. Therefore, a expected limit of $10^{}-49$cm$^2$ has been set for WIMP masses above 10 GeV/$c^2$. While it would be possible to measure the slight difference between two, it would take unrealistically long as explained in the beginning of this section. 
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Nuclear_neutrino.png}
+    \caption{Neutrino scatterings of a nucleus in a LXe detector with the higher energetic solar neutrinos (${}^8$B) in red, diffuse supernova background (DSNB), He-$p$, and atmospheric neutrinos in blue. Three WIMP masses have been plotted with different cross sections. Image from \cite{Baudis:2013qla}}
+    \label{fig:nuclear_neutrino}
+\end{figure}
+
+While the limits on the cross section and mass can be decreased to values below the neutrino floor, eventually no extra parameter space can be reached using current detectors. The exposure will have to be unrealistically large for small cross section and low WIMP mass. This makes it impossible to continue the search using current detectors.
 
 \subsection{Continue searching? \small{\textit{Jelle van Urk}}}
 \textbf{Jelle}
