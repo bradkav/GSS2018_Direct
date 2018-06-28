@@ -18,3 +18,13 @@ The `main code` notebook looks very nice, with lots of detailed text and latex! 
 * Your plots of the differential rate (`plt.loglog(mDM,dRdE_test,label='E=%.2g GeV'%E)`) are nice, but this is not usually how this information is presented :) Typically, you fix the DM mass and plot dRdE as a function of E. You can put curves for multiple DM masses or multiple detector targets on the same plot so that you can see how the spectrum of recoils changes with DM mass and with detector nucleus. 
 * Recoil energies are typically in the keV range. For example, Xenon1T can see recoils in the range of ~2 keV up to about 50 keV - see Fig. 1 of https://arxiv.org/abs/1805.12562.
 * Once you have the differential rates, you can integrate over recoil energies to determine the *number* of signal events which are expected in a detector. Only worry about this if you have time - focus first on getting the differential recoil rates correct!
+
+
+### General Comments [BK 28/06/2018]
+
+* In the introduction, 63% seems a bit small for the fraction of matter which is Dark. Shouldn't this be more like 80+% (a reference here would be good).
+* In Section 2, you describe the DM distribution as 'stationary', but this should probably be 'isotropic' (i.e. the DM has not average net motion, but it is moving).
+*  In Eq. 3, I think there is a mistake. The two cross sections sigma_SI and sigma_SD should not add coherently in this way (i.e. I think you have squared the sum of the cross sections, which isn't correct). Please check this.
+*  Eq. 5 and 6 should probably appear after they are mentioned (i.e. "a normalised response function of an ensemble of spin-1/2 particles:" and then have Eq. 5, etc.) rather than appearing randomly.
+*  Sec. 2.2 on the velocity distribution still needs to be completed, including uncertainties on the velocity distribution and what N-body simulations (including recent hydrodynamical ones) suggest about the velocity distribution (is it a standard Maxwell-Boltzmann, or something else?)
+*  To be continued... 
